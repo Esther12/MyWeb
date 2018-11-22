@@ -1,0 +1,15 @@
+body {
+    background-color: azure;
+    color: black;
+    font-size: medium;
+}
+
+h1 {
+    color: red;
+    margin: 10px;
+}
+
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}

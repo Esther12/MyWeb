@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    {% if msg %}
+        {{ msg }}
+    {% elif courses %}
+        <div class="list-group">
+            {% for course in courses %}
+                <a href="#" class="list-group-item list-group-item-success">{{ course }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

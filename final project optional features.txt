@@ -1,0 +1,124 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgenericrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww28600\viewh15100\viewkind0
+\deftab720
+\pard\pardeftab720\li357\fi-357\ri0\sa120\qj\partightenfactor0
+
+\f0\b\fs22 \cf0 Final project\
+Group 52-4\
+group members: \
+\pard\pardeftab720\li8640\sa120\partightenfactor0
+
+\fs18 \cf2 \expnd0\expndtw0\kerning0
+Xinyi Zhou: 104534524\
+Yating Su: 104443714\
+Yuze Zou: 104526851
+\b0\fs22 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\li357\fi-357\ri0\sa120\qj\partightenfactor0
+
+\b \cf0 \
+\pard\pardeftab720\li357\fi-357\ri0\sa120\qj\partightenfactor0
+\cf0 REQUIRED FEATURES\
+\pard\pardeftab720\li714\fi-357\ri0\sa120\qj\partightenfactor0
+\ls1\ilvl0
+\b0 \cf0 1.	In 
+\i admin.py
+\i0  create a class 
+\b BookAdmin(admin.ModelAdmin)
+\b0 , register this with the admin site and show the title, author, number of pages, and in_stock status, for each book, in the admin interface page that lists all books. \
+2.	Add \'91register\'92 view that allows a user to register as a 
+\i Student
+\i0 . 
+\fs20 Update 
+\i myapp/urls.py
+\i0  and create 
+\i register.html
+\i0\fs22 \
+3.	Add the following lines to 
+\i views.py
+\i0 \
+\pard\pardeftab720\li720\ri0\sa120\qj\partightenfactor0
+\cf0 from django.contrib.auth import authenticate, login, logout\
+from django.contrib.auth.decorators import login_required\
+\pard\pardeftab720\li714\fi-357\ri0\sa120\qj\partightenfactor0
+\ls2\ilvl0\cf0 4.	Add the following \'91login\'92 view that authenticates and logs in a valid user. 
+\fs20 Update 
+\i myapp/urls.py
+\i0  and create 
+\i login.html 
+\i0 as needed to access this view function.
+\b\fs22 \
+\ls2\ilvl0
+\b0 5.	Add the following \'91logout\'92 view that allows a logged in user to logout. 
+\fs20 Update 
+\i myapp/urls.py
+\i0  and create 
+\i logout.html 
+\i0 as needed to access this view function.
+\b\fs22 \
+\ls2\ilvl0
+\b0 6.	Update 
+\i base.html
+\i0  so that if a user is logged in, it will display a \'93logout\'94 link. Otherwise it will display a \'93login\'94 and a \'93register\'94 link. Each link should go to the corresponding view function defined in items 3-5 (above). (HINT: Update all previously created 
+\i views
+\i0  to pass 
+\b request.user
+\b0  as extra context to corresponding template.)\
+7.	Update 
+\i base.html
+\i0  so that if a user is logged in, it will display \'93Hello <first_name>\'94 instead of \'93Hello User\'94.  Here <first_name> is the first name of the user that is currently logged in. (HINT: Ensure that all 
+\i views
+\i0  pass 
+\b request.user
+\b0  as extra context to corresponding template.)\
+\pard\pardeftab720\li714\fi-357\ri0\qj\partightenfactor0
+\ls2\ilvl0
+\fs20 \cf0 8.	Create 
+\i mycourses 
+\i0  view. Define a view function 
+\i mycourses(request)
+\i0  in your 
+\i views.py
+\i0  file. The user must be logged in to access this function. For a logged in user:
+\fs22 \
+\pard\pardeftab720\li1074\fi-357\ri0\partightenfactor0
+
+\fs20 \cf0 a. If the user is a student, return the list of courses the student is registered in \
+b. Otherwise, display a message: \'91You are not a student!\'92. \
+c. Update 
+\i myapp/urls.py
+\i0  appropriately.\
+\pard\pardeftab720\li357\fi360\ri0\partightenfactor0
+\cf0 d. Create 
+\i mycourses.html
+\i0  to display courses or suitable message.\
+\pard\pardeftab720\li357\fi-357\ri0\sa120\qj\partightenfactor0
+
+\b\fs22 \cf0 \
+Optional features that we have done:
+\b0 \
+\pard\pardeftab720\li720\fi-360\ri0\sa120\qj\partightenfactor0
+\ls3\ilvl0\cf3 1.	Add validators for 
+\b numpages
+\b0  field in 
+\b Book
+\b0  model so that it is between 50 and 1000. \
+2.	Use Bootstrap to style your pages\
+3.	In 
+\i admin.py
+\i0  create a class 
+\b StudentAdmin(admin.ModelAdmin)
+\b0 , register this with the admin site and show the first name, last name, and list of courses the student is registered in, for each student, in the admin interface page that lists all students. \
+4.	Update 
+\i base.html
+\i0  so that a link \'91Courses I am registered in\'92 appears only for authenticated users. Clicking on this link brings the user to 
+\i mycourses
+\i0  view as defined in item 8 of the required features. \cf0 \
+ \
+}

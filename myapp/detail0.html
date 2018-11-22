@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <h1>Course Detail</h1>
+    {% if course %}
+        <ul>
+            <li>{{ course }}</li>
+        </ul>
+    {% endif %}
+    <a href="{% url 'myapp:index' %}">index</a>
+{% endblock %}
